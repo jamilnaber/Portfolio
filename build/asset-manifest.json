@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d63aea0c.chunk.css",
+    "main.js": "/static/js/main.2eca6602.chunk.js",
+    "main.js.map": "/static/js/main.2eca6602.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f10f9715.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f10f9715.js.map",
+    "static/css/2.95f25948.chunk.css": "/static/css/2.95f25948.chunk.css",
+    "static/js/2.5fbd5073.chunk.js": "/static/js/2.5fbd5073.chunk.js",
+    "static/js/2.5fbd5073.chunk.js.map": "/static/js/2.5fbd5073.chunk.js.map",
+    "static/js/3.1d70b7ea.chunk.js": "/static/js/3.1d70b7ea.chunk.js",
+    "static/js/3.1d70b7ea.chunk.js.map": "/static/js/3.1d70b7ea.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.d63aea0c.chunk.css.map": "/static/css/main.d63aea0c.chunk.css.map",
+    "static/js/2.5fbd5073.chunk.js.LICENSE.txt": "/static/js/2.5fbd5073.chunk.js.LICENSE.txt",
+    "static/media/android-logo.20c91afa.svg": "/static/media/android-logo.20c91afa.svg",
+    "static/media/github-logo.d1bb13ce.svg": "/static/media/github-logo.d1bb13ce.svg",
+    "static/media/selfPicture.6736f215.jpg": "/static/media/selfPicture.6736f215.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f10f9715.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.5fbd5073.chunk.js",
+    "static/css/main.d63aea0c.chunk.css",
+    "static/js/main.2eca6602.chunk.js"
+  ]
+}
