@@ -3,6 +3,8 @@ import Hero from '../Components/Hero'
 import Content from '../Components/Content'
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import emailjs from "emailjs-com";
+import Swal from 'sweetalert2'
 
 class ContactPage extends React.Component {
     
@@ -18,9 +20,73 @@ class ContactPage extends React.Component {
     }
 
     handleChange = (event) => {
-        // const target = event.target;
-        // const value = target.type === 'checkbox' ? target.checked : target.value;
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        })
     }
+
+
+    handleSubmit = (event) => {
+
+        event.preventDefault();
+
+        const templateId = 'portfolio-template'
+
+        this.sendFeedback(templateId, {
+            message: this.state.message, 
+            name: this.state.name, 
+            email: this.state.email
+        })
+
+        // this.setState({
+        //     disable: true,
+        //     // emailsent: false,
+        // });
+
+        // axios.post('http://localhost:3001/api/email', this.state)
+        //     .then( res => {
+        //         if(res.data.success) {
+        //             this.setState({
+        //                 disable: false,
+        //                 emailsent: true
+        //             });
+        //         } else {
+        //             this.setState({
+        //                 disable: false,
+        //                 emailsent: false
+        //             });
+        //         }
+        //     })
+        //     .catch(err => {
+        //         this.setState({
+        //             disable: false,
+        //             emailsent: false
+        //         });
+        //     })
+    }
+
+    sendFeedback = (templateId, variables) => {
+        emailjs.send(
+          'Portfolio ', templateId,
+          variables, 'user_FjuKAQoOKppKL7KZYUDC9'
+          ).then(res => {
+            Swal.fire({
+              title: 'Email Successfully Sent',
+              icon: 'success'
+            })
+          })
+          .catch(err => {
+            Swal.fire({
+              title: 'Email Failed to Send',
+              icon: 'error'
+            })
+            console.error('Email Error:', err)
+          })
+      }
 
     render(){
         return(
