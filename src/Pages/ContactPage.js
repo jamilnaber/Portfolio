@@ -41,32 +41,6 @@ class ContactPage extends React.Component {
             name: this.state.name, 
             email: this.state.email
         })
-
-        // this.setState({
-        //     disable: true,
-        //     // emailsent: false,
-        // });
-
-        // axios.post('http://localhost:3001/api/email', this.state)
-        //     .then( res => {
-        //         if(res.data.success) {
-        //             this.setState({
-        //                 disable: false,
-        //                 emailsent: true
-        //             });
-        //         } else {
-        //             this.setState({
-        //                 disable: false,
-        //                 emailsent: false
-        //             });
-        //         }
-        //     })
-        //     .catch(err => {
-        //         this.setState({
-        //             disable: false,
-        //             emailsent: false
-        //         });
-        //     })
     }
 
     sendFeedback = (templateId, variables) => {
