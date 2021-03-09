@@ -232,13 +232,6 @@ function AboutPage(props) {
                 </div>
             </div> 
         </div>
-        // <div>
-        //     <Hero title={props.title} />
-
-        //     <Content>
-        //         <p> Work on it soon with HTML and CSS</p>
-        //     </Content>
-        // </div>
     );
 }
 

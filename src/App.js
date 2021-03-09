@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
+import ProjectPage from './Pages/ProjectPage';
 
 class App extends React.Component {
 
@@ -41,14 +42,16 @@ class App extends React.Component {
 
   render(){
     return (
-        <Router>
-          <Container className="p-0"  fluid={true} >
+        <Router className ="">
+          <div className = "containerC">
+          <Container className="p-0 main-content" fluid={true} >
             <Navbar style={{backgroundColor: '#6ebfc2'}} className="border-bottom"  expand="lg">
               <Navbar.Brand >Jamil Naber</Navbar.Brand>
               <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
               <Navbar.Collapse id="navbar-toggle">
                 <Nav className="ml-auto" >
                   <Link className="nav-link" to="/">Home</Link>
+                  <Link className="nav-link" to="/Projects">Projects</Link>
                   <Link className="nav-link" to="/about">About</Link>
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </Nav>
@@ -58,13 +61,15 @@ class App extends React.Component {
             <Route path='/' exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
             <Route path='/about' render={() => <AboutPage title={this.state.about.title} />} />
             <Route path='/contact' render={() => <ContactPage title={this.state.contact.title} />} />
-
-            <Footer />
-
+            <Route path='/Projects' render={() => <ProjectPage />} />
           </Container>
+          <Footer/>
+          </div>
         </Router>
       );
   }
 }
 
 export default App;
+
+//            <Route path='/Projects' Component={ProjectPage} />
